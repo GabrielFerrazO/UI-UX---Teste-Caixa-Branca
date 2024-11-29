@@ -61,3 +61,42 @@ Este projeto contém um código básico para estudo de testes de caixa branca. E
 2. Compile o código com:
    ```bash
    javac User.java
+
+
+## Etapa 3 - Grafo de Fluxo, Complexidade Ciclomática e Caminhos Independentes
+
+### Grafo de Fluxo
+Abaixo está o grafo de fluxo do método `verificarUsuario`:
+
+![Grafo de Fluxo](Grafo_Fluxo.drawio.png)
+
+---
+
+### Complexidade Ciclomática
+A complexidade ciclomática foi calculada com a fórmula: M = E - N + 2P
+
+- **Nodos (N)**: 7
+- **Arestas (E)**: 8
+- **Componentes (P)**: 1
+
+Resultado: M = 8 - 7 + 2(1) = 3
+
+
+---
+
+### Caminhos Independentes
+1. **Caminho 1**:
+   - Início → Conectar ao Banco → Montar SQL → Executar Consulta → Decisão (rs.next = falso) → Retornar Falso.
+
+2. **Caminho 2**:
+   - Início → Conectar ao Banco → Montar SQL → Executar Consulta → Decisão (rs.next = verdadeiro) → Atualizar Nome e Resultado.
+
+3. **Caminho 3**:
+   - Início → Conectar ao Banco → Falha na conexão ou exceção → Retornar Falso.
+
+
+
+
+
+
+
